@@ -1,0 +1,12 @@
+# General
+title: sisou.github.io
+description: Testing the configurability of a remote theme
+remote_theme: pmarsceill/just-the-docs
+
+# Theme Options
+search_enabled: true
+aux_links:
+  "Developer Center":
+    - "https://nimiq.com/developers"
+  "NPM":
+    - "https://www.npmjs.com/package/@nimiq/hub-api"
