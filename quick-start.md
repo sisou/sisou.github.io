@@ -10,7 +10,7 @@ Get started in three easy steps:
 
 <div class="code-example">
   <p>Your address: <span id="output">-</span></p>
-  <p><button id="choose-address" class="btn btn-primary">Choose Address</button></p>
+  <button id="choose-address" class="btn btn-primary mb-1">Choose Address</button>
 
   <script src="https://cdn.jsdelivr.net/npm/@nimiq/hub-api@v1.0/dist/standalone/HubApi.standalone.umd.js"></script>
   <script>
