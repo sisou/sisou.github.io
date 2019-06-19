@@ -2,7 +2,11 @@
 // // Typography
 // //
 //
+
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+
 // $body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+$body-font-family: 'Muli', sans-serif;
 // $mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace;
 // $root-font-size: 17px;         // Base font-size for rems
 // $body-line-height: 1.3;
@@ -118,3 +122,8 @@ $btn-primary-color: rgb(5, 130, 202);
 //   lg: 800px,
 //   xl: 1316px
 // );
+
+/* Custom styles */
+.navigation-list-child-list {
+  display: block !important;
+}
