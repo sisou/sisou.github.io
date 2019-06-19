@@ -16,11 +16,11 @@ permalink: /using-redirects
 
 ## Configuring Top-Level Redirects
 
-> **Note:** To use redirects instead of popups, your app must run under HTTPS!
-
 If you prefer top-level redirects instead of popups, you can pass an
 instance of `RedirectRequestBehavior` as a second parameter to either the
 HubApi initialization or to any API method:
+
+> **Note:** To use redirects instead of popups, your app must run under HTTPS!
 
 > **Note:** The way to configure top-level redirects will likely change in an upcoming
 > version of the Hub API!
