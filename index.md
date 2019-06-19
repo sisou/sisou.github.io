@@ -14,6 +14,7 @@ users' Nimiq addresses.
 ## Table of Contents
 {: .text-delta}
 
+- [Quick Start](/quick-start)
 - [Installation](/installation)
 - [Usage](/usage)
 - [API Methods](/api-methods)
