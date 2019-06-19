@@ -55,4 +55,4 @@ Your address: <span id="output">-</span>
 
 ---
 
-For more details about available methods on the `HubApi`, please see the [API Methods](/api-menthods).
+For more details about available methods on the `HubApi`, please see the [API Methods](/api-methods).
