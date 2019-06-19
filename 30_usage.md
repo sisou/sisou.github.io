@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Usage
-nav_order: 40
+nav_order: 30
 ---
 
 ## Initialization
