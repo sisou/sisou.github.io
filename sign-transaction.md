@@ -9,19 +9,20 @@ nav_order: 40
 {: .no_toc }
 
 The `signTransaction()` method is similar to [checkout](/checkout), but provides a different
-UI to the user.
-
-The **important differences to checkout** are:
-
-- It requires the request to include the sender's address as `sender`.
-- It requires the request to include the transaction's `validityStartHeight`.
-- The created transaction will only be returned to the caller, not sent to the network.
+UI to the user. This request does not connect to the Nimiq blockchain at any point, so it can
+be used to sign transactions offline.
 
 ## Table of contents
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
+
+## Important differences to checkout
+
+- It requires the request to include the sender's address as `sender`.
+- It requires the request to include the transaction's `validityStartHeight`.
+- The created transaction will only be returned to the caller, not sent to the network.
 
 ## Request
 
