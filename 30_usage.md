@@ -5,6 +5,8 @@ nav_order: 30
 permalink: /usage
 ---
 
+# Usage
+
 ## Initialization
 
 To start the client, just instantiate the `HubAPI` class by passing it the URL
