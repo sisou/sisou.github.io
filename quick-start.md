@@ -28,7 +28,7 @@ Add this to your HTML page:
 Put this in your script:
 
 ```javascript
-const hubApi = new HubApi('https://hub.nimiq-testnet.com'); // Use 'https://hub.nimiq.com' for mainnet
+const hubApi = new HubApi('https://hub.nimiq-testnet.com');
 ```
 
 ## Get a user's address
@@ -36,42 +36,40 @@ const hubApi = new HubApi('https://hub.nimiq-testnet.com'); // Use 'https://hub.
 Add a click handler to a button and call a Hub API method:
 
 <div class="code-example">
-
-  <p>
-    Your address: <span id="user-address">-</span>
-  </p>
-  <button id="choose-address" class="btn btn-primary">Choose Address</button>
+  <p>Your address: <span id="user-address">-</span></p>
+  <p><button id="choose-address" class="btn btn-primary">Choose Address</button></p>
 
   <script>
     document.getElementById('choose-address').addEventListener('click', async function(event) {
+      const output = document.getElementById('output');
+
       try {
         const result = await hubApi.chooseAddress({ appName: 'Hub API Docs' });
-        document.getElementById('user-address').textContent = result.address;
-        console.log(result);
+        output.textContent = result.address;
       } catch (error) {
-        console.error(error);
+        output.textContent = error.message;
       }
     });
   </script>
-
 </div>
 ```html
-<p>
-  Your address: <span id="user-address">-</span>
-</p>
+Your address: <span id="output">-</span>
 <button id="choose-address">Choose Address</button>
 
 <script>
   document.getElementById('choose-address').addEventListener('click', async function(event) {
+    const output = document.getElementById('output');
+
     try {
       const result = await hubApi.chooseAddress({ appName: 'Hub API Docs' });
-      document.getElementById('user-address').textContent = result.address;
-      console.log(result);
+      output.textContent = result.address;
     } catch (error) {
-      console.error(error);
+      output.textContent = error.message;
     }
   });
 </script>
 ```
+
+---
 
 For more details about available methods on the `HubApi`, please see the [API Methods](/api-menthods).
