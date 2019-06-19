@@ -12,8 +12,8 @@ By using the `chooseAddress()` method, you are asking the user to select one of
 their addresses to provide to your website. This can be used for example to find
 out which address your app should send funds to.
 
-**Note:** This method should not be used as a login or authentication mechanism,
-as it does not provide any security that the user actually owns the provided address!
+***Note:** This method should not be used as a login or authentication mechanism,
+as it does not provide any security that the user actually owns the provided address!*
 
 ## Table of contents
 {: .no_toc .text-delta }
