@@ -18,7 +18,7 @@ be used to sign transactions offline.
 1. TOC
 {:toc}
 
-## Important differences to checkout
+## Differences to Checkout
 
 - It requires the request to include the sender's address as `sender`.
 - It requires the request to include the transaction's `validityStartHeight`.
