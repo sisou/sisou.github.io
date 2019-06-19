@@ -19,6 +19,7 @@ Get started in three easy steps:
 
 Add this to your HTML page:
 
+<script src="https://cdn.jsdelivr.net/npm/@nimiq/hub-api@v1.0/dist/standalone/HubApi.standalone.umd.js"></script>
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@nimiq/hub-api@v1.0/dist/standalone/HubApi.standalone.umd.js"></script>
 ```
@@ -27,6 +28,9 @@ Add this to your HTML page:
 
 Put this in your script:
 
+<script>
+  const hubApi = new HubApi('https://hub.nimiq-testnet.com');
+</script>
 ```javascript
 const hubApi = new HubApi('https://hub.nimiq-testnet.com');
 ```
