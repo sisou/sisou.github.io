@@ -47,4 +47,6 @@ import HubApi from '@nimiq/hub-api';
 const HubApi = require('@nimiq/hub-api');
 ```
 
+---
+
 Next: [Usage](/usage)
