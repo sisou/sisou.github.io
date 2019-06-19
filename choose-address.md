@@ -38,7 +38,7 @@ as it does not provide any security that the user actually owns the provided add
         const result = await hubApi.chooseAddress({
           appName: 'Hub API Docs',
         });
-        output.textContent = result.address + ' (' result.label + ')';
+        output.textContent = result.address + ' (' + result.label + ')';
       } catch (error) {
         output.textContent = error.message;
       }
