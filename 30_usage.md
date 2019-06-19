@@ -2,6 +2,7 @@
 layout: default
 title: Usage
 nav_order: 30
+permalink: /usage
 ---
 
 ## Initialization
