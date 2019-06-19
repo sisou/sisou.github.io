@@ -6,8 +6,9 @@ nav_order: 10
 
 # Installation
 
-- [Script from CDN](#script-from-cdn)
-- [NPM and Bundlers](#npm-and-bundlers)
+## Table of contents {: .no_toc .text-delta }
+
+1. TOC {:toc}
 
 ## Script from CDN
 
