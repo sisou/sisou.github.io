@@ -6,9 +6,11 @@ nav_order: 10
 
 # Installation
 
-## Table of contents {: .no_toc .text-delta }
+## Table of contents
+{: .no_toc .text-delta }
 
-1. TOC {:toc}
+1. TOC
+{:toc}
 
 ## Script from CDN
 
