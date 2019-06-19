@@ -1,37 +1,29 @@
 ---
-title: Home
+title: Overview
 layout: default
+nav_order: 0
 ---
 
-# Nimiq Hub <!-- omit in toc -->
+# Nimiq Hub API
 
-The Nimiq Hub provides a unified interface for
-all Nimiq accounts, addresses, and contracts. It is the primary UI for Nimiq users
-to manage their accounts and provides websites and apps with a concise API to
-interact with their users' Nimiq addresses.
+The Nimiq Hub provides a unified interface for all Nimiq accounts, addresses,
+and contracts. It is the primary UI for Nimiq users to manage their accounts
+and provides websites and apps with a concise API to interact with their
+users' Nimiq addresses.
 
-- [The Hub API library](#the-hub-api-library)
-    - [Installation](#installation)
-    - [Initialization](#initialization)
-    - [Usage](#usage)
-        - [Using top-level redirects](#using-top-level-redirects)
-    - [API Methods](#api-methods)
-        - [Checkout](#checkout)
-        - [Choose Address](#choose-address)
-        - [Sign Transaction](#sign-transaction)
-        - [Sign Message](#sign-message)
-    - [Account Management](#account-management)
-    - [Listening for redirect responses](#listening-for-redirect-responses)
-- [Running your own Hub](#running-your-own-hub)
-- [Contribute](#contribute)
-    - [Setup](#setup)
-    - [Run](#run)
-    - [Build](#build)
-    - [Configuration](#configuration)
+- [Installation](#installation)
+- [Initialization](#initialization)
+- [Usage](#usage)
+    - [Using top-level redirects](#using-top-level-redirects)
+- [API Methods](#api-methods)
+    - [Checkout](#checkout)
+    - [Choose Address](#choose-address)
+    - [Sign Transaction](#sign-transaction)
+    - [Sign Message](#sign-message)
+- [Account Management](#account-management)
+- [Listening for redirect responses](#listening-for-redirect-responses)
 
-## The Hub API library
-
-### Installation
+## Installation
 
 Include the `HubApi` JS library as a script tag in your page:
 
@@ -58,7 +50,7 @@ import HubApi from '@nimiq/hub-api';
 const HubApi = require('@nimiq/hub-api');
 ```
 
-### Initialization
+## Initialization
 
 To start the client, just instantiate the class by passing it the URL of the
 **Nimiq Hub** to connect to:
@@ -71,7 +63,7 @@ const hubApi = new HubApi('https://hub.nimiq-testnet.com');
 const hubApi = new HubApi('https://hub.nimiq.com');
 ```
 
-### Usage
+## Usage
 
 By default, the client opens a popup window for user interactions. On mobile
 devices, a new tab will be opened instead. For simplicity, we will always refer
@@ -90,7 +82,7 @@ document.getElementById('checkoutButton').addEventListener('click', function(eve
 For more details about avoiding popup blocking refer to
 [this article](https://javascript.info/popup-windows#popup-blocking).
 
-#### Using top-level redirects
+### Using top-level redirects
 
 > **Note:** To use redirects instead of popups, your app must run under a
 > HTTPS domain!
@@ -132,7 +124,7 @@ const redirectBehavior = new RedirectRequestBehavior(null, storedData);
 For details on how to listen for redirect responses and retrieve the stored
 data, see [Listening for redirect responses](#listening-for-redirect-responses).
 
-### API Methods
+## API Methods
 
 - [Checkout](#checkout)
 - [Choose Address](#choose-address)
@@ -149,7 +141,7 @@ data, see [Listening for redirect responses](#listening-for-redirect-responses).
 > An error can also occur when the request contains invalid parameters. The request
 > promise will be rejected with an `Error` object.
 
-#### Checkout
+### Checkout
 
 The `checkout()` method allows your site to request a transaction from the user.
 This will open a popup for the user to select the address to send from &mdash;
@@ -249,7 +241,7 @@ interface SignedTransaction {
 The `serializedTx` can be handed to a Nimiq JSON-RPC's `sendRawTransaction` method.
 The `raw` object can be handed to the NanoApi's `relayTransaction` method.
 
-#### Choose Address
+### Choose Address
 
 By using the `chooseAddress()` method, you are asking the user to select one of
 their addresses to provide to your website. This can be used for example to find
@@ -280,7 +272,7 @@ interface Address {
 }
 ```
 
-#### Sign Transaction
+### Sign Transaction
 
 The `signTransaction()` method is similar to checkout, but provides a different
 UI to the user. The main difference to `checkout()` is that it requires the
@@ -323,7 +315,7 @@ const signedTransaction = await hubApi.signTransaction(requestOptions);
 The `signTransaction()` method returns a `SignedTransaction`. See
 [Checkout](#checkout) for details.
 
-#### Sign Message
+### Sign Message
 
 To let the user sign an arbitrary message with any of their addresses, you can
 call `signMessage()` with the following request object. If you do not include
@@ -391,7 +383,7 @@ const hash = Nimiq.Hash.computeSha256(dataBytes);
 const isValid = signature.verify(publicKey, hash);
 ```
 
-### Account Management
+## Account Management
 
 Account management functions of the Nimiq Hub, while available on the HubApi, are
 not yet accessible by 3rd-party apps, only by the Nimiq Safe. Developers can however
@@ -399,7 +391,7 @@ configure their own builds to accept arbitrary origins for these methods.
 
 [Account Management API Documentation](https://github.com/nimiq/hub/wiki/Account-Management-API)
 
-### Listening for redirect responses
+## Listening for redirect responses
 
 If you configured the HubApi to use
 [top-level redirects](#using-top-level-redirects) instead of popups, you need to
@@ -450,75 +442,3 @@ enum HubApi.RequestType {
     SIGN_MESSAGE = 'sign-message',
 }
 ```
-
-## Running your own Hub
-
-TODO
-
-If you want to run your own instance of Hub, you also need to run
-an instance of the [Keyguard](https://github.com/nimiq/keyguard-next/).
-
-## Contribute
-
-To get started with working on the source code, pull the code and install the dependencies:
-
-### Setup
-
-```bash
-git clone https://github.com/nimiq/hub.git
-cd hub
-yarn
-```
-
-### Run
-
-Compile and serve with hot-reload in the background for development:
-
-```bash
-yarn run serve
-```
-
-Compile and lint continuously in the background for development:
-
-```bash
-yarn run build --watch
-```
-
-Lint and fix files:
-
-```bash
-yarn run lint
-```
-
-Run unit tests:
-
-```bash
-yarn run test
-```
-
-### Build
-
-Compile and minify for production:
-
-```bash
-yarn run build
-```
-
-### Configuration
-
-The following values can be changed via configuration files:
-
-- keyguardEndpoint: The location of your keyguard instance.
-- network: The network you want to use. Possible values are 'main', 'test' and
-  'dev'. You can use the constants (see default configs).
-- networkEndpoint: The location of the network iframe instance you want to use.
-- privilegedOrigins: An array of origins with special access rights, nameley
-  permission to use iframe methods like `list()`.
-- redirectTarget: In case of empty referrer or absence of request, the user is
-  redirected to this page.
-
-The default config file is `config.local.ts`. To use a different file
-(especially useful for deployment), set an environment variable
-`build`. E.g. `export build='testnet'` to use `config.testnet.ts`. To set
-environment variables permanently, please refer to your server's documentation,
-e.g. [for Apache](https://httpd.apache.org/docs/2.4/env.html).
