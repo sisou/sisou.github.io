@@ -10,5 +10,5 @@ aux_links:
     - "https://nimiq.com/developers"
   "NPM":
     - "https://www.npmjs.com/package/@nimiq/hub-api"
-  "Nimiq.com"
+  "Nimiq.com":
     - "https://nimiq.com"
