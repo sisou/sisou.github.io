@@ -5,6 +5,7 @@ nav_order: 10
 ---
 
 # Installation
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
