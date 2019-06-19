@@ -25,7 +25,7 @@ as it does not provide any security that the user actually owns the provided add
 
 <div class="code-example">
   <p>Result: <span id="output">-</span></p>
-  <p><button id="choose-address-btn" class="btn btn-primary">Choose Address</button></p>
+  <button id="choose-address-btn" class="btn btn-primary mb-1">Choose Address</button>
 
   <script src="https://cdn.jsdelivr.net/npm/@nimiq/hub-api@v1.0/dist/standalone/HubApi.standalone.umd.js"></script>
   <script>
