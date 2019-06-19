@@ -1,6 +1,6 @@
 # General
-title: sisou.github.io
-description: Testing the configurability of a remote theme
+title: "Nimiq Hub API"
+description: "Documentation of the Nimiq Hub API, the secure and central place to interact with your users' keys."
 remote_theme: pmarsceill/just-the-docs
 
 # Theme Options
@@ -10,3 +10,5 @@ aux_links:
     - "https://nimiq.com/developers"
   "NPM":
     - "https://www.npmjs.com/package/@nimiq/hub-api"
+  "Nimiq.com"
+    - "https://nimiq.com"
