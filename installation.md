@@ -31,10 +31,10 @@ You can also `import` from the CDN as an ES6 module:
 
 ## NPM and Bundlers
 
-The Hub API can be installed from NPM to use with bundlers (for example Webpack, Rollup, Parcel, etc.):
+The Hub API can be installed from NPM to use with bundlers (for example Webpack, Rollup, etc.):
 
 ```bash
-npm install @nimiq/hub-api
+npm install --save @nimiq/hub-api
 # or with yarn
 yarn add @nimiq/hub-api
 ```
