@@ -24,7 +24,7 @@ processing in your site, storage on your server or re-submittal.
 
 <div class="code-example">
   <p>Result: <span id="output">-</span></p>
-  <p><button id="checkout-btn" class="btn btn-primary">Checkout</button></p>
+  <button id="checkout-btn" class="btn btn-primary mb-1">Checkout</button>
 
   <script src="https://cdn.jsdelivr.net/npm/@nimiq/hub-api@v1.0/dist/standalone/HubApi.standalone.umd.js"></script>
   <script>
