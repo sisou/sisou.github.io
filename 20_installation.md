@@ -2,6 +2,7 @@
 title: Installation
 layout: default
 nav_order: 20
+permalink: /installation
 ---
 
 # Installation
