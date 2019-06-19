@@ -37,7 +37,7 @@ available accounts. The message can be either a string or a Uint8Array byte arra
           appName: 'Hub API Docs',
           message: 'I like the Nimiq Hub API!',
         });
-        output.textContent = 'Message signed by: ' + result.signer;
+        output.textContent = 'Message signed by ' + result.signer;
       } catch (error) {
         output.textContent = error.message;
       }
