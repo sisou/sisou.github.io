@@ -6,6 +6,7 @@ nav_order: 10
 ---
 
 # Checkout
+{: .no_toc }
 
 The `checkout()` method allows your site to request a transaction from the user.
 This will open a popup for the user to select the address to send from &mdash;
@@ -13,18 +14,53 @@ or cancel the request. During the payment process, the signed transaction is
 sent (relayed) to the network but also returned to the caller, e.g. for
 processing in your site, storage on your server or re-submittal.
 
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
 ## Request
 
+<div class="code-example">
+  <p>Result: <span id="output">-</span></p>
+  <p><button id="checkout-btn" class="btn btn-primary">Checkout</button></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/@nimiq/hub-api@v1.0/dist/standalone/HubApi.standalone.umd.js"></script>
+  <script>
+    const hubApi = new HubApi('https://hub.nimiq-testnet.com');
+
+    document.getElementById('checkout-btn').addEventListener('click', async function(event) {
+      const output = document.getElementById('output');
+
+      try {
+        const result = await hubApi.checkout({
+          appName: 'Hub API Docs',
+          recipient: 'NQ07 0000 0000 0000 0000 0000 0000 0000 0000',
+          value: 3.14 * 1e5, // 3.14 NIM
+        });
+        output.textContent = 'Checkout complete, transaction sent!';
+      } catch (error) {
+        output.textContent = error.message;
+      }
+    });
+  </script>
+</div>
 ```javascript
-const requestOptions = {
-    // See Options table below
+const options = {
+  appName: 'Hub API Docs',
+  recipient: 'NQ07 0000 0000 0000 0000 0000 0000 0000 0000',
+  value: 3.14 * 1e5, // 3.14 NIM
+  // See more options in the table below
 };
 
 // All client requests are async and return a promise
-const signedTransaction = await hubApi.checkout(requestOptions);
+const signedTransaction = await hubApi.checkout(options);
 ```
 
 ## Options
+
+(On mobile, scroll right to see the whole table.)
 
 | Option | Type | Required? | Description |
 |:-------|:-----|:----------|:------------|
