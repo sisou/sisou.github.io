@@ -36,7 +36,7 @@ const hubApi = new HubApi('https://hub.nimiq-testnet.com');
 Add a click handler to a button and call a Hub API method:
 
 <div class="code-example">
-  <p>Your address: <span id="user-address">-</span></p>
+  <p>Your address: <span id="output">-</span></p>
   <p><button id="choose-address" class="btn btn-primary">Choose Address</button></p>
 
   <script>
