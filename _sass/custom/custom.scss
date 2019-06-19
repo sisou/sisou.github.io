@@ -3,13 +3,14 @@
 // //
 //
 
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700|Fira+Mono&display=swap');
 
 // $body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
 $body-font-family: 'Muli', sans-serif;
 // $mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace;
-// $root-font-size: 17px;         // Base font-size for rems
-// $body-line-height: 1.3;
+$mono-font-family: 'Fira Mono', monospace;
+// $root-font-size: 16px;         // Base font-size for rems
+// $body-line-height: 1.4;
 // $body-heading-line-height: 1.15;
 //
 // //
@@ -50,7 +51,7 @@ $body-font-family: 'Muli', sans-serif;
 
 $body-text-color: rgba(31, 35, 72, 0.7);
 $body-heading-color: rgb(31, 35, 72);
-// $nav-child-link-color: $grey-dk-100 !default;
+$nav-child-link-color: rgb(33, 188, 165);
 $link-color: rgb(5, 130, 202);
 $btn-primary-color: rgb(5, 130, 202);
 // $base-button-color: #f7f7f7 !default;
@@ -126,4 +127,8 @@ $btn-primary-color: rgb(5, 130, 202);
 /* Custom styles */
 .navigation-list-child-list {
   display: block !important;
+}
+
+h1, h2, h3 {
+  font-weight: bold !important;
 }
